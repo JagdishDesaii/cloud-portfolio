@@ -1,17 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Jagdish Desai | Cloud Engineer & Architect</title>
-  <style>
-    body { font-family: Arial; margin: 0; background: #0f172a; color: white; }
-    header { background: #020617; padding: 40px; text-align: center; }
-    section { padding: 40px; }
-    h1 { color: #38bdf8; }
-    .card { background: #1e293b; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
-    footer { background: #020617; text-align: center; padding: 20px; }
-    a { color: #38bdf8; text-decoration: none; }
-  </style>
+<meta charset="UTF-8">
+<title>Jagdish Desai | Cloud Engineer & Architect</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ice1:#38bdf8;
+  --ice2:#0ea5e9;
+  --bg1:#020617;
+  --bg2:#0f172a;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+  background:linear-gradient(135deg,var(--bg1),var(--bg2));
+  color:white;
+}
+
+header{
+  text-align:center;
+  padding:90px 20px;
+  background:linear-gradient(120deg,#020617,#0f172a);
+}
+
+header h1{
+  font-size:3rem;
+  background:linear-gradient(90deg,var(--ice1),var(--ice2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+header p{margin-top:10px;font-size:1.1rem;color:#cbd5f5;}
+
+.container{max-width:1000px;margin:auto;padding:40px 20px;}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:rgba(255,255,255,0.04);
+  backdrop-filter:blur(12px);
+  border-radius:15px;
+  padding:25px;
+  border:1px solid rgba(255,255,255,0.08);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 40px rgba(56,189,248,0.3);
+}
+
+.card h2{color:var(--ice1);margin-bottom:10px;}
+
+a{color:var(--ice1);text-decoration:none;}
+
+footer{
+  text-align:center;
+  padding:30px;
+  background:#020617;
+  margin-top:50px;
+  color:#94a3b8;
+}
+</style>
 </head>
+
 <body>
 
 <header>
@@ -19,33 +79,37 @@
   <p>Cloud Engineer & Cloud Architect</p>
 </header>
 
-<section>
-  <div class="card">
-    <h2>About Me</h2>
-    <p>I am a passionate Cloud Engineer and Cloud Architect with hands-on experience in AWS, Linux and DevOps. I enjoy building secure, scalable cloud solutions and learning new technologies.</p>
-  </div>
+<div class="container">
+  <div class="grid">
 
-  <div class="card">
-    <h2>Skills</h2>
-    <p>AWS, EC2, S3, Linux, Docker, Networking, Python, GitHub, DevOps</p>
-  </div>
+    <div class="card">
+      <h2>About Me</h2>
+      <p>I am a passionate Cloud Engineer and Cloud Architect with hands-on experience in AWS, Linux and DevOps. I enjoy building secure, scalable cloud solutions and learning new technologies.</p>
+    </div>
 
-  <div class="card">
-    <h2>Experience</h2>
-    <p>Android Developer Virtual Internship — EduSkills Foundation (Jul–Sep 2024)</p>
-  </div>
+    <div class="card">
+      <h2>Skills</h2>
+      <p>AWS • EC2 • S3 • Linux • Docker • Networking • Python • GitHub • DevOps</p>
+    </div>
 
-  <div class="card">
-    <h2>Education</h2>
-    <p>B.Tech in Computer Science and Engineering</p>
-  </div>
+    <div class="card">
+      <h2>Experience</h2>
+      <p>Android Developer Virtual Internship — EduSkills Foundation<br>(Jul–Sep 2024)</p>
+    </div>
 
-  <div class="card">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:jdesai7178@gmail.com">jdesai7178@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/jagdish-desai-792948289">View Profile</a></p>
+    <div class="card">
+      <h2>Education</h2>
+      <p>B.Tech in Computer Science and Engineering</p>
+    </div>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:jdesai7178@gmail.com">jdesai7178@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/jagdish-desai-792948289">View Profile</a></p>
+    </div>
+
   </div>
-</section>
+</div>
 
 <footer>
   <p>© 2025 Jagdish Desai</p>
@@ -53,4 +117,5 @@
 
 </body>
 </html>
+
 
