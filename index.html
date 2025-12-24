@@ -3,14 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Jagdish Desai | Cloud Engineer & Architect</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 :root{
-  --ice1:#38bdf8;
-  --ice2:#0ea5e9;
-  --pink1:#ffe4e6;
-  --pink2:#fecdd3;
+  --ice1:#d6f0f5;
+  --ice2:#f9e6f0;
   --card:#fff0f3;
+  --text-dark:#0f172a;
+  --text-light:#334155;
 }
 
 *{
@@ -21,27 +23,48 @@
 }
 
 body{
-  background:linear-gradient(135deg,var(--pink1),var(--pink2));
-  color:#0f172a;
+  background: linear-gradient(135deg, var(--ice1), var(--ice2));
+  color: var(--text-dark);
+  transition: background 0.5s ease-in-out;
+  animation: bgAnimation 20s ease-in-out infinite alternate;
+}
+
+@keyframes bgAnimation {
+  0% { background: linear-gradient(135deg, #d6f0f5, #f9e6f0); }
+  50% { background: linear-gradient(135deg, #f9e6f0, #ffe4e6); }
+  100% { background: linear-gradient(135deg, #d6f0f5, #ffe4e6); }
 }
 
 header{
   text-align:center;
-  padding:90px 20px;
-  background:linear-gradient(120deg,#ffd1dc,#fecdd3);
+  padding:80px 20px;
+  background: linear-gradient(120deg, #d6f0f5, #f9e6f0);
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
 }
 
 header h1{
   font-size:3rem;
-  background:linear-gradient(90deg,var(--ice1),var(--ice2));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+  background: linear-gradient(90deg, #38bdf8, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 3s ease-in-out infinite alternate;
+}
+
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 header p{
   margin-top:10px;
-  font-size:1.1rem;
-  color:#475569;
+  font-size:1.2rem;
+  color: #475569;
 }
 
 .container{
@@ -58,32 +81,138 @@ header p{
 
 .card{
   background:var(--card);
-  border-radius:15px;
+  border-radius:20px;
   padding:25px;
   border:1px solid rgba(0,0,0,0.05);
-  transition:0.3s;
+  transition:0.4s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transform: translateY(0);
 }
 
 .card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(56,189,248,0.3);
+}
+
+.card h2{
+  color:#ec4899;
+  margin-bottom:10px;
+  transition: color 0.3s ease;
+}
+
+.card:hover h2{
+  color:#3b82f6;
+}
+
+a{
+  color:#3b82f6;
+  text-decoration:none;
+  transition: color 0.3s ease;
+}
+
+a:hover{
+  color:#ec4899;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  background: #f9e6f0;
+  margin-top:50px;
+  color: var(--text-light);
+}
+
+ul{
+  list-style: disc;
+  margin-left: 20px;
+}
+
+section{
+  margin-top:40px;
 }
 </style>
 </head>
+
 <body>
 
 <header>
   <h1>Jagdish Desai</h1>
-  <p>Cloud Engineer & Architect</p>
+  <p>Cloud Engineer & Cloud Architect</p>
 </header>
 
 <div class="container">
+
   <div class="grid">
-    <div class="card">Card 1</div>
-    <div class="card">Card 2</div>
-    <div class="card">Card 3</div>
+    <div class="card">
+      <h2>About Me</h2>
+      <p>I am a passionate Cloud Engineer and Cloud Architect with hands-on experience in AWS, Linux, and DevOps. I enjoy building secure, scalable cloud solutions and continuously learning new technologies. I have completed B.Tech in Computer Science & Engineering in 2025 from Sant Gajanan Maharaj College of Engineering, Mahagaon.</p>
+    </div>
+
+    <div class="card">
+      <h2>Technical Skills</h2>
+      <p>C/C++ • Java • Python • Android • MySQL • AWS • Linux • Docker • GitHub • DevOps</p>
+    </div>
+
+    <div class="card">
+      <h2>Soft Skills</h2>
+      <ul>
+        <li>Leadership</li>
+        <li>Decision Making</li>
+        <li>Good Communication</li>
+        <li>Management</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Education</h2>
+      <ul>
+        <li>B.Tech Computer Science & Engineering, Sant Gajanan Maharaj College of Engineering, CGPA: 7.5 (2025)</li>
+        <li>Diploma MSBTE, Sant Gajanan Maharaj Rural Polytechnic, 86.3% (2022)</li>
+        <li>SSC, S.S. High School, Nesari, 77.14% (2019)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Projects</h2>
+      <ul>
+        <li>Institute Level Technical Event Management System</li>
+        <li>Tourism Management System</li>
+        <li>Digital Scrapyard Using Modern Web Technologies</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Certifications</h2>
+      <ul>
+        <li>HTML5, Python, Flask Framework – Udemy</li>
+        <li>AWS Container Services – ECS, ECR with Fargate and EC2 – Udemy</li>
+        <li>C & C++ Programming – Udemy</li>
+        <li>Java Collections Framework + Generics, Lambdas & Stream API – Udemy</li>
+        <li>MySQL Complete Course – Udemy</li>
+        <li>Data Analytics & Visualization Job Simulation Certification</li>
+        <li>AWS Skill Builder Certifications</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Internship</h2>
+      <p>Completed 10-week Android Developer Virtual Internship by India Edu Program / Google For Developers Platform (Jul–Sep 2024)</p>
+    </div>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:jdesai7178@gmail.com">jdesai7178@gmail.com</a></p>
+      <p>Phone: 9764061066</p>
+      <p>Location: Gadhinglaj, Dist-Kolhapur, Maharashtra, India</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/jagdish-desai-792948289">View Profile</a></p>
+    </div>
+
   </div>
 </div>
+
+<footer>
+  <p>© 2025 Jagdish Desai</p>
+</footer>
 
 </body>
 </html>
