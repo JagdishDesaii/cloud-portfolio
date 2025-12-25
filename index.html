@@ -165,7 +165,7 @@ section{
 
   <header>
   <div class="profile-header">
-    <img src="myphoto.jpeg" alt="Jagdish Desai" class="profile-pic">
+    <img src="73a04132-563f-4a40-8b0a-4a1ac6962720.png" alt="Jagdish Desai" class="profile-pic">
     <div class="profile-info">
       <h1><span class="name-gradient">Jagdish Desai</span></h1>
       <p>Cloud Engineer & Cloud Architect</p>
@@ -181,12 +181,14 @@ section{
   padding: 40px 20px;
   background: linear-gradient(135deg, #e6f0fa, #f9e6f0);
   border-radius: 15px;
+  max-width: 700px;
+  margin: auto;
 }
 
 .profile-pic {
   width: 150px;
-  height: 150px;
-  object-fit: cover;
+  height: 200px; /* match your full photo aspect ratio */
+  object-fit: contain; /* shows the entire image */
   border-radius: 15px;
   border: 2px solid #38bdf8;
 }
