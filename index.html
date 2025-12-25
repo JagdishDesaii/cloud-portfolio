@@ -222,6 +222,7 @@ section{
 </body>
 </html> -->
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -249,7 +250,6 @@ section{
 body{
   background: linear-gradient(135deg, var(--ice1), var(--ice2));
   color: var(--text-dark);
-  transition: background 0.5s ease-in-out;
   animation: bgAnimation 20s ease-in-out infinite alternate;
 }
 
@@ -260,33 +260,9 @@ body{
 }
 
 header{
-  text-align:center;
   padding:80px 20px;
   background: linear-gradient(120deg, #d6f0f5, #f9e6f0);
   animation: fadeIn 2s ease-in-out;
-}
-
-.profile-header{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:25px;
-  flex-wrap:wrap;
-}
-
-.profile-pic{
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  object-fit:cover;
-  border:4px solid #38bdf8;
-  box-shadow:0 8px 20px rgba(0,0,0,0.15);
-  transition:0.4s ease;
-}
-
-.profile-pic:hover{
-  transform:scale(1.08);
-  box-shadow:0 15px 40px rgba(56,189,248,0.5);
 }
 
 @keyframes fadeIn {
@@ -294,24 +270,40 @@ header{
   to {opacity: 1; transform: translateY(0);}
 }
 
+.profile-header{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.profile-pic{
+  width:140px;
+  height:140px;
+  object-fit:cover;
+  border-radius:16px;
+  border:4px solid #38bdf8;
+  box-shadow:0 12px 25px rgba(0,0,0,0.2);
+  transition:0.4s;
+}
+
+.profile-pic:hover{
+  transform: scale(1.05) rotate(1deg);
+  box-shadow:0 18px 40px rgba(56,189,248,0.4);
+}
+
 header h1{
   font-size:3rem;
   background: linear-gradient(90deg, #38bdf8, #f472b6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientText 3s ease-in-out infinite alternate;
-}
-
-@keyframes gradientText {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
 }
 
 header p{
   margin-top:10px;
   font-size:1.2rem;
-  color: #475569;
+  color:#475569;
 }
 
 .container{
@@ -330,14 +322,13 @@ header p{
   background:var(--card);
   border-radius:20px;
   padding:25px;
-  border:1px solid rgba(0,0,0,0.05);
-  transition:0.4s ease;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition:0.4s;
+  box-shadow:0 8px 20px rgba(0,0,0,0.05);
 }
 
 .card:hover{
   transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 15px 40px rgba(56,189,248,0.3);
+  box-shadow:0 15px 40px rgba(56,189,248,0.3);
 }
 
 .card h2{
@@ -350,25 +341,12 @@ a{
   text-decoration:none;
 }
 
-a:hover{
-  color:#ec4899;
-}
-
 footer{
   text-align:center;
   padding:30px;
-  background: #f9e6f0;
+  background:#f9e6f0;
   margin-top:50px;
-  color: var(--text-light);
-}
-
-ul{
-  list-style: disc;
-  margin-left: 20px;
-}
-
-section{
-  margin-top:40px;
+  color:var(--text-light);
 }
 </style>
 </head>
@@ -377,8 +355,7 @@ section{
 
 <header>
   <div class="profile-header">
-    <img src="myphoto.jpeg" alt="Jagdish Desai" class="profile-pic">
-
+    <img src="myphoto.jpg" alt="Jagdish Desai" class="profile-pic">
     <div>
       <h1>Jagdish Desai</h1>
       <p>Cloud Engineer & Cloud Architect</p>
@@ -387,21 +364,88 @@ section{
 </header>
 
 <div class="container">
+
   <div class="grid">
+    <div class="card">
+      <h2>About Me</h2>
+      <p>I am a passionate Cloud Engineer and Cloud Architect with hands-on experience in AWS, Linux, and DevOps...</p>
+    </div>
 
-    <!-- Your cards stay exactly same below -->
-    
-    <!-- (I kept your original content unchanged) -->
+   <div class="card">
+  <h2>Technical Skills</h2>
+  <p>
+    C/C++ • Java • Python • Android • MySQL • Linux • GitHub • DevOps • Docker <br><br>
+    <strong>AWS Services:</strong><br>
+    EC2 • S3 • IAM • VPC • RDS • Lambda • CloudFront • CloudWatch • SNS • SQS • Route 53 • 
+    Elastic Load Balancer • Auto Scaling • ECR • ECS • EKS • API Gateway • DynamoDB 
+    • CloudFormation 
+  </p>
+</div>
 
-    <!-- ... content remains as you had it ... -->
+<div class="card">
+  <h2>Soft Skills</h2>
+  <p>
+    Communication • Team Collaboration • Problem Solving • Critical Thinking • 
+    Time Management • Adaptability • Leadership • Decision Making 
+    • Work Ethic • Client Handling 
+  </p>
+</div>
 
+
+    <div class="card">
+      <h2>Education</h2>
+      <p>B.Tech CSE – 2025 • Diploma – 2022 • SSC – 2019</p>
+    </div>
+
+    <div class="card">
+  <h2>Certifications</h2>
+  <ol>
+    <li>AWS Container Services – ECS, ECR with Fargate and EC2 – Udemy</li>
+    <li>AWS Skill Builder Certification – AWS Training & Certification</li>
+    <li>Getting Started with DevOps on AWS – AWS Training & Certification</li>
+    <li>Amazon EC2 Basics – AWS Training & Certification</li>
+    <li>Right Size Your Amazon EC2 Workload – AWS Training & Certification</li>
+    <li>HTML5, Python, Flask Framework – All in One Complete Course – Udemy</li>
+    <li>Build Laravel Apps Fast with Blueprint – Udemy</li>
+    <li>C & C++ Programming – Udemy</li>
+    <li>Java Collections Framework + Generics, Lambdas & Stream API – Udemy</li>
+    <li>MySQL Complete Course – Udemy</li>
+    <li>Design Thinking – Infosys</li>
+    <li>The Fledgling – Infosys</li>
+    <li>Web Development – Prodigy InfoTech</li>
+    <li>Coding for Marketers – Sololearn</li>
+    <li>Responsive Web Design – Sololearn</li>
+    <li>Python for Data Science – Sololearn</li>
+    <li>Big Data and Cloud Computing – YBI Foundation</li>
+    <li>Data Analytics and Visualization Job Simulation – Forage</li>
+    <li>Generative AI – Microsoft</li>
+    <li>Advanced Google Analytics – Google</li>
+    <li>Data Science Methodology – IBM</li>
+    <li>Machine Learning with Python – IBM</li>
+    <li>Deep Learning with TensorFlow – IBM</li>
+    <li>Cognizant’s Agile Methodology – Forage</li>
+    <li>Project Management Professional (PMP) – PMI</li>
+  </ol>
+</div>
+
+
+    <div class="card">
+      <h2>Projects</h2>
+      <p>Event Management • Tourism System • Digital Scrapyard</p>
+    </div>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Email: jdesai7178@gmail.com</p>
+      <p>Phone: 9764061066</p>
+    </div>
   </div>
+
 </div>
 
 <footer>
-  <p>© 2025 Jagdish Desai</p>
+  © 2025 Jagdish Desai
 </footer>
 
 </body>
 </html>
-
