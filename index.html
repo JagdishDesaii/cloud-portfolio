@@ -27,6 +27,7 @@ body{
   color: var(--text-dark);
   transition: background 0.5s ease-in-out;
   animation: bgAnimation 20s ease-in-out infinite alternate;
+  line-height:1.6;
 }
 
 @keyframes bgAnimation {
@@ -36,10 +37,11 @@ body{
 }
 
 header{
-  text-align:center;
-  padding:80px 20px;
+  padding:50px 20px;
   background: linear-gradient(120deg, #d6f0f5, #f9e6f0);
   animation: fadeIn 2s ease-in-out;
+  display:flex;
+  justify-content:center;
 }
 
 @keyframes fadeIn {
@@ -47,8 +49,22 @@ header{
   to {opacity: 1; transform: translateY(0);}
 }
 
+.profile-header{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.profile-header img{
+  width:120px;
+  height:120px;
+  object-fit:cover;
+  border-radius:10px;
+  border:2px solid #38bdf8;
+}
+
 header h1{
-  font-size:3rem;
+  font-size:2.8rem;
   background: linear-gradient(90deg, #38bdf8, #f472b6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -62,20 +78,20 @@ header h1{
 }
 
 header p{
-  margin-top:10px;
+  margin-top:5px;
   font-size:1.2rem;
   color: #475569;
 }
 
 .container{
-  max-width:1000px;
+  max-width:1100px;
   margin:auto;
   padding:40px 20px;
 }
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
   gap:25px;
 }
 
@@ -90,7 +106,7 @@ header p{
 }
 
 .card:hover{
-  transform: translateY(-10px) scale(1.05);
+  transform: translateY(-10px) scale(1.03);
   box-shadow: 0 15px 40px rgba(56,189,248,0.3);
 }
 
@@ -122,13 +138,16 @@ footer{
   color: var(--text-light);
 }
 
-ul{
-  list-style: disc;
+ul, ol{
   margin-left: 20px;
 }
 
 section{
   margin-top:40px;
+}
+
+.project-name{
+  font-weight:600;
 }
 </style>
 </head>
@@ -136,7 +155,7 @@ section{
 <body>
 <header>
   <div class="profile-header">
-    <img src="myphoto.jpeg" alt="Jagdish Desai" class="profile-pic">
+    <img src="myphoto.jpeg" alt="Jagdish Desai">
     <div>
       <h1>Jagdish Desai</h1>
       <p>Cloud Engineer & Cloud Architect</p>
@@ -144,9 +163,7 @@ section{
   </div>
 </header>
 
-
 <div class="container">
-
   <div class="grid">
     <div class="card">
       <h2>About Me</h2>
@@ -154,24 +171,22 @@ section{
     </div>
 
     <div class="card">
-  <h2>Technical Skills</h2>
-  <p>
-    C/C++ • Java • Python • Android • MySQL • Linux • GitHub • DevOps • Docker <br><br>
-    <strong>AWS Services:</strong><br>
-    EC2 • S3 • IAM • VPC • RDS • Lambda • CloudFront • CloudWatch • SNS • SQS • Route 53 • 
-    Elastic Load Balancer • Auto Scaling • ECR • ECS • EKS • API Gateway • DynamoDB 
-    • CloudFormation 
-  </p>
-</div>
+      <h2>Technical Skills</h2>
+      <p>
+        C/C++ • Java • Python • Android • MySQL • Linux • GitHub • DevOps • Docker <br><br>
+        <strong>AWS Services:</strong><br>
+        EC2 • S3 • IAM • VPC • RDS • Lambda • CloudFront • CloudWatch • SNS • SQS • Route 53 • 
+        Elastic Load Balancer • Auto Scaling • ECR • ECS • EKS • API Gateway • DynamoDB • CloudFormation
+      </p>
+    </div>
 
-<div class="card">
-  <h2>Soft Skills</h2>
-  <p>
-    Communication • Team Collaboration • Problem Solving • Critical Thinking • 
-    Time Management • Adaptability • Leadership • Decision Making 
-    • Work Ethic • Client Handling 
-  </p>
-</div>
+    <div class="card">
+      <h2>Soft Skills</h2>
+      <p>
+        Communication • Team Collaboration • Problem Solving • Critical Thinking • 
+        Time Management • Adaptability • Leadership • Decision Making • Work Ethic • Client Handling
+      </p>
+    </div>
 
     <div class="card">
       <h2>Education</h2>
@@ -184,54 +199,57 @@ section{
 
     <div class="card">
       <h2>Internship</h2>
-      <p>Completed 10-week Android Developer Virtual Internship by India Edu Program / Google For Developers Platform (Jul–Sep 2024)</p>
-<p>“Completed GenAI Internship at NIT Hydrabad"</p>
+      <ul>
+        <li>10-week Android Developer Virtual Internship by India Edu Program / Google For Developers Platform (Jul–Sep 2024)</li>
+        <li>GenAI Internship at NIT Hyderabad</li>
+      </ul>
     </div>
-
-   
-
-    <div class="card">
-  <h2 class="project-name">Institute Level Technical Event Management System</h2>
-  <p>Web-based platform to manage college events.</p>
-  <p><strong>Features:</strong> registration, scheduling, admin dashboard, notifications.</p>
-  <p><strong>Technologies:</strong> HTML, CSS, JS, Flask/PHP, MySQL</p>
-</div>
-
 <div class="card">
-  <h2 class="project-name">Tourism Management System</h2>
-  <p>Platform to search, book, and plan trips.</p>
-  <p><strong>Features:</strong> destination search, hotel booking, itineraries, admin panel.</p>
-  <p><strong>Technologies:</strong> HTML, CSS, Bootstrap, JS, PHP/MySQL, Google Maps API</p>
-</div>
-
-<div class="card">
-  <h2 class="project-name">Digital Scrapyard Using Modern Web Technologies</h2>
-  <p>Marketplace for buying/selling/recycling scrap materials.</p>
-  <p><strong>Features:</strong> listings, real-time prices, messaging, admin dashboard.</p>
-  <p><strong>Technologies:</strong> React.js, Node.js, Express.js, MongoDB/MySQL, REST APIs</p>
-</div>
-
-    <div class="card">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:jdesai7178@gmail.com">jdesai7178@gmail.com</a></p>
       <p>Phone: 9764061066</p>
       <p>Location: Gadhinglaj, Dist-Kolhapur, Maharashtra, India</p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/jagdish-desai-792948289">View Profile</a></p>
     </div>
-<div class="card">
-  <h2>AWS & Cloud</h2>
-  <ol>
-    <li>AWS Container Services – ECS, ECR with Fargate and EC2 – Udemy</li>
-    <li>AWS Skill Builder Certification – AWS Training & Certification</li>
-    <li>Getting Started with DevOps on AWS – AWS Training & Certification</li>
-    <li>Amazon EC2 Basics – AWS Training & Certification</li>
-    <li>Right Size Your Amazon EC2 Workload – AWS Training & Certification</li>
-    <li>Big Data and Cloud Computing – YBI Foundation</li>
-  </ol>
+    
+    <div class="card">
+  <h2 class="project-name">Project Name: Institute Level Technical Event Management System</h2>
+  <p>Web-based platform to manage college events.</p>
+  <p><strong>Features:</strong> registration, scheduling, admin dashboard, notifications.</p>
+  <p><strong>Technologies:</strong> HTML, CSS, JS, Flask/PHP, MySQL</p>
 </div>
 
 <div class="card">
-  <h2>Programming & Web Development</h2>
+  <h2 class="project-name">Project Name: Tourism Management System</h2>
+  <p>Platform to search, book, and plan trips.</p>
+  <p><strong>Features:</strong> destination search, hotel booking, itineraries, admin panel.</p>
+  <p><strong>Technologies:</strong> HTML, CSS, Bootstrap, JS, PHP/MySQL, Google Maps API</p>
+</div>
+
+<div class="card">
+  <h2 class="project-name">Project Name: Digital Scrapyard Using Modern Web Technologies</h2>
+  <p>Marketplace for buying/selling/recycling scrap materials.</p>
+  <p><strong>Features:</strong> listings, real-time prices, messaging, admin dashboard.</p>
+  <p><strong>Technologies:</strong> React.js, Node.js, Express.js, MongoDB/MySQL, REST APIs</p>
+</div>
+
+
+    
+
+    <div class="card">
+      <h2>AWS & Cloud</h2>
+      <ol>
+        <li>AWS Container Services – ECS, ECR with Fargate and EC2 – Udemy</li>
+        <li>AWS Skill Builder Certification – AWS Training & Certification</li>
+        <li>Getting Started with DevOps on AWS – AWS Training & Certification</li>
+        <li>Amazon EC2 Basics – AWS Training & Certification</li>
+        <li>Right Size Your Amazon EC2 Workload – AWS Training & Certification</li>
+        <li>Big Data and Cloud Computing – YBI Foundation</li>
+      </ol>
+    </div>
+
+  <div class="card">
+  <h2>Programming & Web Development Certificate</h2>
   <ol>
     <li>HTML5, Python, Flask Framework – All in One Complete Course – Udemy</li>
     <li>Build Laravel Apps Fast with Blueprint – Udemy</li>
@@ -245,7 +263,7 @@ section{
 </div>
 
 <div class="card">
-  <h2>Data Science & AI</h2>
+  <h2>Data Science & AI Certificate</h2>
   <ol>
     <li>Python for Data Science – Sololearn</li>
     <li>Data Analytics and Visualization Job Simulation – Forage</li>
@@ -258,7 +276,7 @@ section{
 </div>
 
 <div class="card">
-  <h2>Professional & Management</h2>
+  <h2>Professional & Management Certificate</h2>
   <ol>
     <li>Design Thinking – Infosys</li>
     <li>The Fledgling – Infosys</li>
@@ -267,6 +285,7 @@ section{
   </ol>
 </div>
 
+</div>
 
 <footer>
   <p>© 2025 Jagdish Desai</p>
@@ -274,5 +293,3 @@ section{
 
 </body>
 </html>
-
-
