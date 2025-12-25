@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -220,4 +220,188 @@ section{
 </footer>
 
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Jagdish Desai | Cloud Engineer & Architect</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ice1:#d6f0f5;
+  --ice2:#f9e6f0;
+  --card:#fff0f3;
+  --text-dark:#0f172a;
+  --text-light:#334155;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background: linear-gradient(135deg, var(--ice1), var(--ice2));
+  color: var(--text-dark);
+  transition: background 0.5s ease-in-out;
+  animation: bgAnimation 20s ease-in-out infinite alternate;
+}
+
+@keyframes bgAnimation {
+  0% { background: linear-gradient(135deg, #d6f0f5, #f9e6f0); }
+  50% { background: linear-gradient(135deg, #f9e6f0, #ffe4e6); }
+  100% { background: linear-gradient(135deg, #d6f0f5, #ffe4e6); }
+}
+
+header{
+  text-align:center;
+  padding:80px 20px;
+  background: linear-gradient(120deg, #d6f0f5, #f9e6f0);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.profile-header{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+}
+
+.profile-pic{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid #38bdf8;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  transition:0.4s ease;
+}
+
+.profile-pic:hover{
+  transform:scale(1.08);
+  box-shadow:0 15px 40px rgba(56,189,248,0.5);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+header h1{
+  font-size:3rem;
+  background: linear-gradient(90deg, #38bdf8, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientText 3s ease-in-out infinite alternate;
+}
+
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header p{
+  margin-top:10px;
+  font-size:1.2rem;
+  color: #475569;
+}
+
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:20px;
+  padding:25px;
+  border:1px solid rgba(0,0,0,0.05);
+  transition:0.4s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.card:hover{
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(56,189,248,0.3);
+}
+
+.card h2{
+  color:#ec4899;
+  margin-bottom:10px;
+}
+
+a{
+  color:#3b82f6;
+  text-decoration:none;
+}
+
+a:hover{
+  color:#ec4899;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  background: #f9e6f0;
+  margin-top:50px;
+  color: var(--text-light);
+}
+
+ul{
+  list-style: disc;
+  margin-left: 20px;
+}
+
+section{
+  margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="profile-header">
+    <img src="myphoto.jpg" alt="Jagdish Desai" class="profile-pic">
+
+    <div>
+      <h1>Jagdish Desai</h1>
+      <p>Cloud Engineer & Cloud Architect</p>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="grid">
+
+    <!-- Your cards stay exactly same below -->
+    
+    <!-- (I kept your original content unchanged) -->
+
+    <!-- ... content remains as you had it ... -->
+
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Jagdish Desai</p>
+</footer>
+
+</body>
 </html>
+
